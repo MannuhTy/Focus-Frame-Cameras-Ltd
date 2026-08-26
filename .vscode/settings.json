@@ -1,0 +1,8 @@
+{
+    "CRS.ObjectNamePrefix": "",
+    "CRS.OnSaveAlFileAction": "Rename",
+    "CRS.ExtensionObjectNamePattern": "<Prefix><BaseName>",
+    "CRS.FileNamePattern": "<ObjectTypeShort><ObjectId>.<ObjectNameShort>.al",    
+    "CRS.DisableDefaultAlSnippets": true,
+    "al.enableCodeAnalysis": true
+}
