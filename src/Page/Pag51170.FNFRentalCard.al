@@ -274,6 +274,23 @@ page 51170 "FNF Rental Card"
                     CurrPage.Update(false);
                 end;
             }
+            action(CloseRental)
+            {
+                ApplicationArea = All;
+                Caption = 'Close Rental';
+                Image = Close;
+                ToolTip = 'Manually closes a Returned rental once the deposit has been fully refunded or forfeited.';
+                Enabled = Rec.Status = Rec.Status::Returned;
+
+                trigger OnAction()
+                var
+                    ClosingMgt: Codeunit "FNF Rental Closing Management";
+                begin
+                    ClosingMgt.CloseRental(Rec);
+                    CurrPage.Update(false);
+                end;
+            }
+
         }
     }
 }
